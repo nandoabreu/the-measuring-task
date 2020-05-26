@@ -1,0 +1,29 @@
+<html>
+<head>
+    {% include "header.html" %}
+    <title>Task Database Data</title>
+</head>
+<body>
+
+    <div class="menu" style="clear: both; display: table;">
+        <div style="float: left; Xborder-color: #b5cde1; background: #b5cde1;">DATA</div>
+        <a href="log"><div style="float: left;">LOGS</div></a>
+    </div>
+
+    <div class="list_row list_header" style="clear: both; display: table;">
+        <div style="float: left; width: 50px;">id</div>
+        <div style="float: left;">timestamp</div>
+        <div style="float: left;">temperature</div>
+        <div style="float: left;">duration</div>
+    </div>
+
+    {% for row in data %}
+    <div class="list_row" style="clear: both; display: table;">
+        <div style="float: left; width: 50px;">{{row[0]}}</div>
+        <div style="float: left;">{{row[1]}}</div>
+        <div style="float: left;">{{row[2]}}</div>
+        <div style="float: left;">{{row[3]}}</div>
+    </div>{% endfor %}
+
+</body>
+</html>

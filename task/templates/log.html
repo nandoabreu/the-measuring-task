@@ -1,0 +1,27 @@
+<html>
+<head>
+    {% include "header.html" %}
+    <title>Task Requests Log</title>
+</head>
+<body>
+
+    <div class="menu" style="clear: both; display: table;">
+        <a href="list"><div style="float: left; Xborder-color: #b5cde1;">DATA</div></a>
+        <div style="float: left; background: #b5cde1;">LOGS</div></a>
+    </div>
+
+    <div class="list_row list_header" style="clear: both; display: table;">
+        <div style="float: left; width: 50px;">seq</div>
+        <div style="float: left;">moment</div>
+        <div style="float: left;">info</div>
+    </div>
+
+    {% for row in data %}
+    <div class="list_row" style="clear: both; display: table;">
+        <div style="float: left; width: 50px;">{{row[0]}}</div>
+        <div style="float: left;">{{row[1]}}</div>
+        <div style="float: left;">{{row[2]}}</div>
+    </div>{% endfor %}
+
+</body>
+</html>
