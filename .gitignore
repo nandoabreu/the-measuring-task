@@ -1,8 +1,19 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
 # Private
+__INTERNAL__/*
 __INTERNAL__/
 __INTERNAL__
 INTERNAL
-*.old
+*[*]ok/*
+*[*]ok/
+*[*]ok
+*[*]old/*
+*[*]old/
+*[*]old
 #config.py
 
 # Editors
@@ -77,6 +88,8 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+migrations/*
+migrations/
 
 # Flask stuff:
 instance/
@@ -109,12 +122,19 @@ celerybeat-schedule
 
 # Environments
 .env
+.venv/*
+.venv/
 .venv
+env/*
 env/
-venv/
+ENV/*
 ENV/
+env.bak/*
 env.bak/
 venv.bak/
+venv.bak/*
+venv/*
+venv/
 
 # Spyder project settings
 .spyderproject
